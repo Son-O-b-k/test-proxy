@@ -7,7 +7,7 @@ const app = express();
 const figmaProxy = createProxyMiddleware({
   target: 'https://www.figma.com',
   changeOrigin: true,
-  secure: false, // Disable SSL verification (for testing purposes)
+  secure: true, // Disable SSL verification (for testing purposes)
   ws: true, // Enable WebSocket proxying
   headers: {
     // Add any headers needed for the Figma website
